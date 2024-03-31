@@ -5,8 +5,6 @@ import { logRoute } from '../src/helpers/helpers.js';
 
 const router = express.Router();
 
-router.get('/', controllers.getDataWithQuery);
-
 //logroute for reporting as requested
 router.get('/joyas',logRoute, controllers.getAllData);
 router.get('/joyas/filtros', controllers.getDataFiltered);
