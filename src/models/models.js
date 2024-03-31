@@ -10,7 +10,6 @@ const modelLimit = async (
     {
         const [atribute, order] = order_by.split('_');
         const offset= (page-1)*limits;
-        console.log(offset);
         
         const formatedQuery = format(
         'SELECT * FROM inventario ORDER BY %I %s LIMIT %L OFFSET %L', 
@@ -21,7 +20,6 @@ const modelLimit = async (
         );
     /* const response = await pool.query(query); */
     const response = await pool.query(formatedQuery);
-    console.log(response);
     return response.rows;
 }
 

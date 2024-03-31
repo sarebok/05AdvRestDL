@@ -1,5 +1,5 @@
 import {modelLimit, modelFilter} from '../models/models.js';
-import prepareHateoas from '../helpers/helpers.js';
+import {prepareHateoas} from '../helpers/helpers.js';
 
 // Controller function to handle the request
 const getDataWithQuery = async (req, res) => {

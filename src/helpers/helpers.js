@@ -14,6 +14,13 @@ const prepareHateoas = async (entity, data) => {
     };
     return HATEOAS;
   };
+
+  const logRoute = (req, res, next) => {
+    console.log(`Route accessed: ${req.method} ${req.originalUrl}`);
+    next();
+};
+
   
   
-  export default prepareHateoas;
+  
+  export {prepareHateoas, logRoute};
