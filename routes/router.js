@@ -8,4 +8,3 @@ router.get('/joyas', controllers.getAllData);
 router.get('/joyas/filtros', controllers.getDataFiltered);
 
 export default router;
-
